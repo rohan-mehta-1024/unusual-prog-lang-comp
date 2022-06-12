@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+     window.addEventListener('load', function() {
+         document.querySelectorAll('.desc').forEach(function(button) {
+             button.addEventListener("mouseover", function() {
+                 button.parentNode.parentNode.parentNode.className = 'flip-box nohover';
+             });
+             button.addEventListener("mouseout", function() {
+                 button.parentNode.parentNode.parentNode.className = 'flip-box';
+             });
+         });
+     });
+
+
+    </script>
 </head>
 <body>
     <div id="navbar" style="width:100%;baackground-color:white;">
         <ul id="nav-cont" style="margin: 0 0 0 0; margin-top: 10px; text-align:center; margin-bottom: 10px; font-family: 'Cabinet Grotesk',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Helvetica Neue',Helvetica,sans-serif; margin-left:0px; padding-left:0px;">
         <!--  <li class="header-items" style="display:inline-block;"><img src="yinyang2.png" style="width:60px;height:60px;"></li>-->
-            <li class="header-items" style="display:inline-block;"><a>Register</a></li>
+            <li class="header-items" style="display:inline-block;"><a href="https://forms.gle/PH48SbQpAPBnUYk27">Register</a></li>
         <li class="header-items" style="display:inline-block;"><a href="#mission">About</li>
             <li class="header-items" style="display:inline-block;"><a href="#team">Our Team</a></li>
             <li class="header-items" style="display:inline-block;margin-right:0px;color:white;"><a>Contact</a></li>
@@ -23,7 +37,7 @@
 
     <p class="text">The high school computer science curriculum is entrenched in old, boring programming languages. Students have no idea of the diversity of programming paradigms out there: from functional, to array-based, to knowledge-based programming. Most have never even heard of pattern matching, macros, or higher-order functions! We want to change this.</p>
 
-    <p class="text">With the help of innovative companies who make use of non-mainstream languages to <a class="orange" target="_blank" href="http://www.paulgraham.com/avg.html">beat the averages</a>, we are hosting a programming language conference to do exactly that, led by and designed for high school students. As programming guru <a class="orange" target="_blank" href="https://en.wikipedia.org/wiki/Alan_Perlis">Alan Perlis</a> once said, <span>&ldquo;A language that doesn't affect the way you think about programming, is not [one] worth knowing.&rdquo; We can promise that if you attend the inaugural EsoLang Conference, your programming worldview will be flipped upside down!</span>
+    <p class="text">With the help of innovative companies who make use of non-mainstream languages to <a class="orange" target="_blank" href="http://www.paulgraham.com/avg.html">beat the averages</a>, we are hosting a programming language conference to do exactly that, led by and designed for high school students. As programming guru <a class="orange" target="_blank" href="https://en.wikipedia.org/wiki/Alan_Perlis">Alan Perlis</a> once said, <span>&ldquo;A language that doesn't affect the way you think about programming, is not [one] worth knowing.&rdquo; We promise that if you attend the inaugural EsoLang Conference, your programming worldview will be flipped upside down!</span>
 
         <h3 class="header">Details</h3>
         <p class="text">This is not your typical high school hackathon. From <strong class="orange">September 23-25</strong> teams of up to five students from around the world will gather to solve hard programming problems, engineer creative solutions, and listen to interactive, world-class lectures. While we will have lots of cool swag and prizes to give away, it is the journey of learning to think in a new and unorthodox language that makes the EsoLang Conference so unique.</p>
@@ -44,7 +58,7 @@
         <div class="outer" style="text-align:center;display:inline-block;">
             <div class ="flip-box">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="border-radius:50%"><img class="people" style="border-radius:50%" src="me7.jpg"><p class="name text">Rohan Mehta, Founder</p></div>
+                    <div class="flip-box-front" style="border-radius:50%"><img class="people" style="border-radius:50%" src="me7.jpg"><p class="name text desc">Rohan Mehta, Founder</p></div>
                     <div class="flip-box-back"  style="border-radius:50%">
                         <p class ="name text">I'm a ML researcher, synbio enthusiast, and functional programming evangelist! Check out my personal website <a class="orange" target="_blank" href="https://mehta-rohan.com">here</a>.</p>
                     </div>
@@ -102,7 +116,7 @@
         <div class="outer" style="text-align:center;display:inline-block;">
             <div class="flip-box">
                 <div class="flip-box-inner">
-                    <div class="flip-box-front" style="border-radius:50%"><img class="people" style="border-radius:50%" src="pepe.jpg"><p class="name text">Pepe, Clojure Lead</p></div>
+                    <div class="flip-box-front" style="border-radius:50%;text-align:center;"><img class="people" style="border-radius:50%" src="pepe.jpg"><p class="name text">José Núñez Sánchez, Clojure Lead</p></div>
                     <div class="flip-box-back"  style="border-radius:50%">
                         <p  class="name text">I'm a high school student from Spain who is passionate about mathematics and guitar.</p>
                     </div>
@@ -130,14 +144,14 @@
         </div>
         <h3 class="header" style="margin-bottom:50px;" id="team">Sponsors (coming soon!)</h3>
 
-       <!-- -  <div id="sponsor-container">
-            <img src="dyalog.png" style="width:200px;height:200px;">
-            <img src="js2.png" style="width:200px;height:200px;">
-            <img src="roam-removebg-preview.png" style="width:300px;height:200px;">
-        </div>-->
+        <div id="sponsor-container">
 
-        <!-- <img class="people" src="anthony.jpg">
-        <img class="people" src="aman.png"> -->
+            <div class="outer" style="text-align:center;display:inline-block;">
+                <img src="js3.png" style="width:200px;height:200px;text-align:center;">
+                <p class="name text orange" style="width:100%;"><a>Jane Street</a></p></div>
+        </div>
+        </div>
+"
         
 </body>
 </html>
